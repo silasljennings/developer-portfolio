@@ -1,0 +1,40 @@
+# Runtime dependencies & builds
+node_modules
+dist
+build
+
+# Env files & secrets
+.env
+.env.*  
+
+# Git metadata
+.git
+.gitignore
+
+# Docker itself
+Dockerfile
+.dockerignore
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE / editor dirs
+.vscode/
+.idea/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Test / coverage output
+coverage/
+*.lcov
+
+# Misc
+*.tgz
+*.zip
+  
+
