@@ -1,28 +1,40 @@
 steps:
 
-  # Build the Docker image for the backend
+  # 1) Build the Docker image, injecting your secrets
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/$REPO_NAME:$SHORT_SHA', '.']
-    secretEnv: ['VITE_APP_EMAILJS_SERVICE_ID', 'VITE_APP_EMAILJS_TEMPLATE_ID', 'VITE_APP_EMAILJS_PUBLIC_KEY']
+    secretEnv:
+      - VITE_APP_EMAILJS_SERVICE_ID
+      - VITE_APP_EMAILJS_TEMPLATE_ID
+      - VITE_APP_EMAILJS_PUBLIC_KEY
+    args:
+      [
+        "build",
+        # ← pass each secret as a build-arg
+        "--build-arg=VITE_APP_EMAILJS_SERVICE_ID=${_VITE_APP_EMAILJS_SERVICE_ID}",
+        "--build-arg=VITE_APP_EMAILJS_TEMPLATE_ID=${_VITE_APP_EMAILJS_TEMPLATE_ID}",
+        "--build-arg=VITE_APP_EMAILJS_PUBLIC_KEY=${_VITE_APP_EMAILJS_PUBLIC_KEY}",
+        "-t",
+        "us-central1-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/$REPO_NAME:$SHORT_SHA",
+        "."
+      ]
 
-  # Verify the image was built and tagged correctly
+  # 2) Verify the image was built
   - name: 'gcr.io/cloud-builders/docker'
     args: [ 'images', 'us-central1-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/$REPO_NAME:$SHORT_SHA' ]
 
-  # Push the Docker image to Artifact Registry
+  # 3) Push the Docker image
   - name: 'gcr.io/cloud-builders/docker'
     args: [ 'push', 'us-central1-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/$REPO_NAME:$SHORT_SHA' ]
 
-  # Deploy the image to Cloud Run
+  # 4) Deploy to Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
-    args: [
-      'run',
-      'deploy',
-      '$REPO_NAME',
-      '--image', 'us-central1-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/$REPO_NAME:$SHORT_SHA',
-      '--region', 'us-central1'
-    ]
+    args:
+      [
+        "run", "deploy", "$REPO_NAME",
+        "--image", "us-central1-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/$REPO_NAME:$SHORT_SHA",
+        "--region", "us-central1"
+      ]
 
 availableSecrets:
   secretManager:
@@ -34,7 +46,6 @@ availableSecrets:
       env: 'VITE_APP_EMAILJS_PUBLIC_KEY'
 
 images:
-  # Specify the Docker image to be pushed to Artifact Registry
   - 'us-central1-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/$REPO_NAME:$SHORT_SHA'
 
 options:
