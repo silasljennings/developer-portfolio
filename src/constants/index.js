@@ -11,13 +11,18 @@ export const navLinks = [
   },
   {
     id: 3,
-    name: 'Work',
+    name: 'Experience',
     href: '#work',
   },
   {
     id: 4,
     name: 'Contact',
     href: '#contact',
+  },
+  {
+    id: 5,
+    name: 'Github',
+    href: 'https://github.com/silasljennings',
   },
 ];
 
