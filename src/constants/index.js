@@ -24,35 +24,35 @@ export const navLinks = [
 export const clientReviews = [
   {
     id: 1,
-    name: 'Emily Johnson',
-    position: 'Marketing Director at GreenLeaf',
-    img: 'assets/review1.png',
+    name: 'Leo Fabisinski',
+    position: 'Senior Electrical Engineer at NASA',
+    img: 'assets/leo-fabisinski.jpeg',
     review:
-      'Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
+      'Having Luke as an intern was a fantastic experience. He showed a remarkable eagerness to learn and quickly adapted to the challenges at hand. His dedication and problem-solving abilities set him apart, and it’s been a pleasure to watch his career take off.',
   },
   {
     id: 2,
-    name: 'Mark Rogers',
-    position: 'Founder of TechGear Shop',
-    img: 'assets/review2.png',
+    name: 'Tyler Carter',
+    position: 'Division Manager, Software at Intuitive',
+    img: 'assets/tyler-carter.jpeg',
     review:
-      'Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.',
+      "Luke's time at Intuitive was nothing short of impressive. He seamlessly moved between multiple teams, contributing to the development, testing, and QA of the AMPS (Aviation Mission Planning System) contract. His versatility, strong work ethic, and ability to adapt to new challenges made him an invaluable asset to the team. His contributions were key to the success of the project.",
   },
   {
     id: 3,
-    name: 'John Dohsas',
-    position: 'Project Manager at UrbanTech ',
-    img: 'assets/review3.png',
+    name: 'Eric Harp',
+    position: 'Investor at Cent Holdings, LLC',
+    img: 'assets/person-icon.png',
     review:
-      'I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
+      "Luke was an invaluable part of our startup team. He wasn’t just a technical resource – he took the time to understand the bigger picture and consistently found ways to align technology with our business goals. I was particularly impressed by his problem-solving abilities and his commitment to delivering quality, even when faced with tight deadlines. Luke’s impact on the team went beyond just executing tasks; he actively contributed to shaping the direction of our tech and product strategy. His potential is clear, and I’m excited to see where his career takes him.",
   },
   {
     id: 4,
-    name: 'Ether Smith',
-    position: 'CEO of BrightStar Enterprises',
-    img: 'assets/review4.png',
+    name: 'Blake Nolan',
+    position: 'Senior Software Developer at Altec Industries, Inc',
+    img: 'assets/person-icon.png',
     review:
-      'Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
+      'Working with Luke has been a great experience. He consistently tackles complex problems and delivers results. His technical skills and ability to collaborate effectively with the team make him a key contributor. Luke’s work ethic and reliability have made him a trusted teammate, and it’s been a pleasure to see his professional growth.',
   },
 ];
 
@@ -63,7 +63,7 @@ export const myProjects = [
     subdesc:
       'Built as a consumer phone app with SwiftUI and Firebase is designed for user reach. Vendor platform built with Angular, Typescript, Firebase and GCP for max performance and scalability. This application is approaching launch.',
     href: 'https://www.cashboardapp.co',
-    texture: '/textures/project/project1.mp4', //TODO:
+    texture: '/textures/project/project1.mp4',
     logo: '/assets/project-logo1.png',
     logoStyle: {
       backgroundColor: '#2A1816',
@@ -221,8 +221,8 @@ export const workExperiences = [
     name: 'Altec Industries, Inc',
     pos: 'Senior Software Developer',
     duration: '2022 - Present',
-    icon: '/assets/framer.svg', //TODO:
-    title: "Engineered AWS- and IoT-enabled, containerized microservices with Angular/Spring Boot UIs and Docker/Python tooling to process, analyze, and optimize ETL for over a billion telematics signals.",
+    icon: '/assets/altec-logo.png',
+    title: "Supporting a telematics product that processes over 1 billion signals a day from trucks. I’ve used AWS, Flink, IoT, and containerized apps to analyze and generate custom rules for these signals. Built microservice infrastructure with Angular, Java, and Spring Boot to help Altec employees access and work with data, driving product subscriptions and services. Optimized the ETL layer using advanced SQL techniques and developed a tool for local microservice development using Docker and Python.",
     animation: 'victory',
   },
   {
@@ -231,7 +231,7 @@ export const workExperiences = [
     pos: 'Full Stack Software Engineer',
     duration: '2020 - 2022',
     title: "Spearheaded the end-to-end development of a high-performance financial analytics platform—integrating private cloud Kubernetes clusters, Bloomberg Terminal, Wolfram notebooks, and VMWare virtualization—to process sub-second market data for 500+ securities while delivering custom user management and story-driven product requirements",
-    icon: '/assets/figma.svg', //TODO:
+    icon: '/assets/business.png',
     animation: 'clapping',
   },
   {
@@ -240,7 +240,7 @@ export const workExperiences = [
     pos: 'Software Development Engineer',
     duration: '2019 - 2020',
     title: "Developed and maintained the Aviation Mission Planning System (AMPS) using C#, .NET, and Node.js to deliver secure, combat-ready pre-flight planning and in-flight analysis tools for US Army Blackhawk and Chinook helicopter pilots.",
-    icon: '/assets/notion.svg', //TODO:
+    icon: '/assets/intuitive-logo.png',
     animation: 'salute',
   },
   {
@@ -249,7 +249,7 @@ export const workExperiences = [
     pos: 'Software Developer Intern',
     duration: '2018 - 2018',
     title: "Developed Advanced Concepts Office plugins that automated cross-disciplinary data aggregation—partnering with propulsion, aerospace, materials, and rocket engineers—to streamline project workflows and save management 10 hours per sprint.",
-    icon: '/assets/notion.svg', //TODO:
+    icon: '/assets/nasa-logo.png',
     animation: 'clapping',
   },
 ];
