@@ -55,7 +55,7 @@ export const clientReviews = [
     id: 4,
     name: 'Blake Nolan',
     position: 'Senior Software Developer at Altec Industries, Inc',
-    img: 'assets/person-icon.png',
+    img: 'assets/blake-nolen.jpeg',
     review:
       'Working with Luke has been a great experience. He consistently tackles complex problems and delivers results. His technical skills and ability to collaborate effectively with the team make him a key contributor. Luke’s work ethic and reliability have made him a trusted teammate, and it’s been a pleasure to see his professional growth.',
   },
