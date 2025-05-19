@@ -53,7 +53,7 @@ export const clientReviews = [
   },
   {
     id: 4,
-    name: 'Blake Nolan',
+    name: 'Blake Nolen',
     position: 'Senior Software Developer at Altec Industries, Inc',
     img: 'assets/blake-nolen.jpeg',
     review:
